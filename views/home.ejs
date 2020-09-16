@@ -2,17 +2,17 @@
 
   <h1>Home</h1>
   <p>
-    <%= homeContent%>
+    <%= startingContent%>
   </p>
 
 
-<% post.forEach(function(posts){ %>
+<% posts.forEach(function(post){ %>
 
-  <h2><%=posts.title%></h2>
-  <%var trunPostContent=posts.post.substring(0, 100)+" ...";%>
+  <h2><%=post.title%></h2>
+  <%var trunPostContent=post.content.substring(0, 100)+" ...";%>
 
   <p><%=trunPostContent%>
- <a href="/posts/<%=posts.title%>">Read More</a></p>
+ <a href="/posts/<%=post._id%>">Read More</a></p>
 
 
 <% }); %>
